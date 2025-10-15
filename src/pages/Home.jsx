@@ -34,7 +34,7 @@ export default function Home() {
       <Feedback />
       <TopDestination />
       <GettoKnow />
-      <div className='h-96 bg-green-500 flex gap-x-6
+      {/* <div className='h-96 bg-green-500 flex gap-x-6
       ' >
         <div className='w-64 h-64 bg-red-500' >
 
@@ -49,13 +49,16 @@ export default function Home() {
 
         </div>
 
-      </div>
+      </div> */}
       <TopDeal />
-      <div className='h-96 bg-blue-500 flex gap-x-6 text-center justify-center items-center
+      {/* <div className='h-96 bg-blue-500 flex gap-x-6 text-center justify-center items-center
       ' >
         <h1>video </h1>
 
-      </div>
+      </div> */}
+
+      
     </div>
   )
 }
+
