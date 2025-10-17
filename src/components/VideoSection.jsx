@@ -9,70 +9,87 @@ export default function PremiumVideoSection() {
 
     return (
         <div className="flex justify-center" >
-        <section className="relative sm:h-[700px] w-[1600px] flex items-center justify-center overflow-hidden">
-            {/* Background Image with Overlay */}
-            <motion.div
-                initial={{ scale: 1.1 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 2 }}
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                    backgroundImage:
-                        "url('https://i.postimg.cc/L6ZS1k76/Whats-App-Image-2025-09-23-at-4-06-21-PM.jpg')",
-                }}
-            >
-                <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-            </motion.div>
-
-            {/* Content */}
-            <div className="relative z-10 flex flex-col items-center text-center px-6">
-                {/* Heading */}
-                <motion.h2
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    className="text-white text-3xl md:text-5xl font-bold mb-12"
+            <section className="relative sm:h-[500px] w-[1600px] flex items-center justify-center overflow-hidden">
+                {/* Background Image with Overlay */}
+                <motion.div
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 2 }}
+                    className="absolute inset-0 bg-cover bg-center opacity-35"
+                    style={{
+                        backgroundImage:
+                            "url('https://htmldesigntemplates.com/html/travelin/images/section-bg1.png')",
+                    }}
                 >
-                    Watch The Experience <br /> Before You Feel It
-                </motion.h2>
+                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                </motion.div>
 
-                {/* Play Button */}
-                <motion.button
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setIsOpen(true)}
-                    className="bg-red-500 hover:bg-red-600 text-white p-8 rounded-full shadow-2xl transition-all flex items-center justify-center text-4xl"
-                >
-                    <FaPlay />
-                </motion.button>
-            </div>
-
-            {/* Modal */}
-            {isOpen && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-                    <button
-                        onClick={() => setIsOpen(false)}
-                        className="absolute top-0 right-0 text-white text-4xl p-3 hover:text-red-500 "
+                
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl">
+                    {/* Heading */}
+                    <motion.h2
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="text-primary text-xl font-serif font-semibold mb-2"
                     >
-                        &times;
-                    </button>
-                    <div className="relative w-full max-w-4xl mx-4">
-                       
-                        <div className="w-full aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
-                            <video
-                                className="w-full h-full"
-                                src={video}
-                                title="Devrana Video"
-                                autoPlay
-                                loop
-                                muted
-                                allowFullScreen
-                            ></video>
+                        Love when you going
+                    </motion.h2>
+                    <motion.h2
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="text-Lightcolor text-5xl font-serif font-semibold mb-3"
+                    >
+                        <span className="text-gray-800" >   Explore Your Life, </span> Travel Where You Want!
+                    </motion.h2>
+                    <motion.p
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1 }}
+                        className="text-gray-500 text-normal font-serif  mb-12"
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </motion.p>
+
+                    {/* Play Button */}
+                    <motion.button
+                        whileHover={{ scale: 1.2 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => setIsOpen(true)}
+                        className="bg-primary text-white p-8 rounded-full shadow-2xl transition-all flex items-center justify-center text-4xl"
+                    >
+                        <FaPlay />
+                    </motion.button>
+                </div>
+
+                {/* Modal */}
+                {isOpen && (
+                    <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+                        <button
+                            onClick={() => setIsOpen(false)}
+                            className="absolute top-0 right-0 text-white text-4xl p-3 hover:text-red-500 "
+                        >
+                            &times;
+                        </button>
+                        <div className="relative w-full max-w-4xl mx-4">
+
+                            <div className="w-full aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
+                                <video
+                                    className="w-full h-full"
+                                    src={video}
+                                    title="Devrana Video"
+                                    autoPlay
+                                    loop
+                                    muted
+                                    allowFullScreen
+                                ></video>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )}
-        </section>
+                )}
+            </section>
         </div>
     );
 }

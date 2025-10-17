@@ -1,18 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Rooms from "./pages/Rooms";
-import RoomDetail from "./pages/RoomDetail";
-import PaymentSuccess from "./pages/PaymentSuccess";
-import BookingSuccess from "./pages/BookingSuccess";
-import AdminBookings from "./pages/AdminBookings";
+
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
-import Footer from "./components/Footer";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Restaurant from "./pages/Restaurant";
-import Menu from "./pages/Menu";
-import EventsAndPackages from "./pages/EventsAndPackages";
-import GalleryPage from "./pages/GalleryPage";
+
 
 function App() {
   return (
