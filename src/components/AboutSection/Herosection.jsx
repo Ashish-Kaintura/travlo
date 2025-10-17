@@ -7,7 +7,7 @@ export default function Herosection() {
         }
       }  >
 
-        <div className='absolute bottom-0 left-0  bg-gray-600 ' >
+        <div className='absolute bottom-0 left-0 rotate-180 ' >
           <img src="https://htmldesigntemplates.com/html/travelin/images/shape8.png" alt="" />
         </div>
       </div>
@@ -15,3 +15,4 @@ export default function Herosection() {
     </>
   )
 }
+

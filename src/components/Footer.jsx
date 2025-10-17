@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import logo from  "../images/logo/Logofinal.png"
+import logo from "../images/logo/Logofinal.png"
 import "../css/footer.css"; // optional custom styles if you want to mimic original look
 
 const instaImages = [
@@ -25,7 +25,51 @@ const Footer = () => {
             className="pt-20 pb-4 relative bg-cover bg-center bg-[#17233e] p-10 "
             style={{ backgroundImage: "url('https://htmldesigntemplates.com/html/travelin/images/background_pattern.png')" }}
         >
-            <div className='absolute top-1 left-0   ' >
+            {/* Falling stars styles + elements */}
+            <style>{`
+                /* falling stars */
+                .stars-wrapper { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+                .falling-star {
+                    position: absolute;
+                    top: -8vh;
+                    border-radius: 50%;
+                    padding:10px;
+                    background: radial-gradient(circle at 30% 30%, #fff, #fcc802, #fff 60%);
+                    box-shadow: 0 0 8px 3px rgba(255,255,255,0.85);
+                    transform: translateY(0) rotate(0);
+                    opacity: 0.9;
+                    /* base animation props — duration/delay are set inline per-star */
+                    animation-name: fall;
+                    animation-timing-function: linear;
+                    animation-iteration-count: infinite;
+                    animation-fill-mode: forwards;
+                }
+                @keyframes fall {
+                    0%   { transform: translateY(-10vh) rotate(0deg) scale(1); opacity: 0.9; }
+                    60%  { opacity: 1; }
+                    100% { transform: translateY(120vh) rotate(360deg) scale(0.9); opacity: 0; }
+                }
+            `}</style>
+
+            <div className="stars-wrapper">
+                {Array.from({ length: 14 }).map((_, i) => (
+                    <div
+                        key={i}
+                        className="falling-star"
+                        style={{
+                            left: `${Math.random() * 100}%`,
+                            width: `${2 + Math.random() * 6}px`,
+                            height: `${2 + Math.random() * 6}px`,
+                            animationDuration: `${4 + Math.random() * 8}s`,
+                            animationDelay: `${-Math.random() * 8}s`,
+                            opacity: 0.8 + Math.random() * 0.4,
+                            transform: `translateY(0) rotate(${Math.floor(Math.random() * 360)}deg)`,
+                        }}
+                    />
+                ))}
+            </div>
+
+            <div className='absolute -top-4 left-0   ' >
                 <img src="https://htmldesigntemplates.com/html/travelin/images/shape8.png" alt="" />
             </div>
             <div
@@ -81,8 +125,8 @@ const Footer = () => {
                             <ul className="text-sm space-y-1">
                                 <li><strong>PO Box:</strong> +47-252-254-2542</li>
                                 <li><strong>Location:</strong> Collins Street, Sydney, Australia</li>
-                                <li><strong>Email:</strong> info@Travelin.com</li>
-                                <li><strong>Website:</strong> www.Travelin.com</li>
+                                <li><strong>Email:</strong> info@Travelosun.com</li>
+                                <li><strong>Website:</strong> www.Travelosun.com</li>
                             </ul>
                         </div>
 
@@ -145,29 +189,14 @@ const Footer = () => {
                             <FaCcDiscover className="text-3xl" />
                         </div>
 
-                        {/* <div className="flex items-center space-x-3">
-                        <select className="p-2 rounded text-black">
-                            <option>English</option>
-                            <option>Chinese</option>
-                            <option>Russian</option>
-                            <option>Japanese</option>
-                            <option>Korean</option>
-                        </select>
-                        <select className="p-2 rounded text-black">
-                            <option>$ USD</option>
-                            <option>$ AUD</option>
-                            <option>$ YEN</option>
-                            <option>$ INR</option>
-                            <option>$ NP</option>
-                        </select>
-                    </div> */}
+
                     </div>
                 </div>
 
                 {/* Copyright */}
                 <div className="footer-copyright border-t border-gray-700 mt-4 pt-4">
                     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between text-white text-sm">
-                        <p>© 2022Travelosun. All rights reserved.</p>
+                        <p>© 2022 Travelosun. All rights reserved.</p>
                         <div className="flex space-x-3 mt-2 md:mt-0">
                             <a href="#"><FaFacebook className="hover:text-pink-500" /></a>
                             <a href="#"><FaTwitter className="hover:text-pink-500" /></a>

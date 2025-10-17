@@ -1,11 +1,11 @@
 import { AiOutlineFolderOpen } from "react-icons/ai";
-import { BsCurrencyDollar } from "react-icons/bs";
+import { BsCurrencyDollar, BsCurrencyRupee } from "react-icons/bs";
 import { FaPlaneDeparture, FaUmbrellaBeach, FaMapSigns, FaMountain, FaSearch } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
 
 export default function AboutSec() {
     return (
-        <section className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-24 py-12 h-screen mt-6 max-w-7xl mx-auto">
+        <section className="relative overflow-hidden flex flex-col md:flex-row items-center justify-between px-6 md:px-16 lg:px-24 pb-12 h-screen mt-6 max-w-7xl mx-auto">
             <div className=" absolute inset-0 bg-center bg-cover bg-no-repeat "
                 style={{ backgroundImage: "url('https://htmldesigntemplates.com/html/travelin/images/background_pattern.png')" }}>
 
@@ -37,7 +37,7 @@ export default function AboutSec() {
                             <span>Tour Guide</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <BsCurrencyDollar className="text-teal-600 text-xl" />
+                            <BsCurrencyRupee className="text-teal-600 text-xl" />
                             <span>Friendly Price</span>
                         </div>
                         <div className="flex items-center gap-2">
@@ -77,7 +77,7 @@ export default function AboutSec() {
                 <img
                     src="	https://htmldesigntemplates.com/html/travelin/images/travel.png"
                     alt="Travelers"
-                    className="w-[350px] md:w-[400px] lg:w-[450px] object-contain relative z-10"
+                    className="w-[350px] md:w-[500px] lg:w-[500px] object-contain relative z-10"
                 />
 
 
