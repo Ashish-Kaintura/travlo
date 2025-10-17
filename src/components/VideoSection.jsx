@@ -9,7 +9,11 @@ export default function PremiumVideoSection() {
 
     return (
         <div className="flex justify-center" >
-            <section className="relative sm:h-[500px] w-[1600px] flex items-center justify-center overflow-hidden">
+            <section className="relative sm:h-[500px] w-[1600px] flex items-center justify-center "
+            >
+                <div className='absolute -bottom-0 bg-black/50  left-0   ' >
+                    <img src="https://htmldesigntemplates.com/html/travelin/images/shape8.png" alt="" />
+                </div>
                 {/* Background Image with Overlay */}
                 <motion.div
                     initial={{ scale: 1.1 }}
@@ -21,7 +25,7 @@ export default function PremiumVideoSection() {
                             "url('https://htmldesigntemplates.com/html/travelin/images/section-bg1.png')",
                     }}
                 >
-                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                    
                 </motion.div>
 
                 
@@ -78,8 +82,8 @@ export default function PremiumVideoSection() {
                             <div className="w-full aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl">
                                 <video
                                     className="w-full h-full"
-                                    src={video}
-                                    title="Devrana Video"
+                                    src="https://player.vimeo.com/924674ce-5921-4c3d-8edd-22cfd2bf62a4"
+                                    title="travel Video"
                                     autoPlay
                                     loop
                                     muted

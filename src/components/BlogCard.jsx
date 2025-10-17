@@ -105,7 +105,8 @@ function Card({ post }) {
 export default function BlogCard() {
     return (
         <>
-            <div className="flex justify-center">
+            <div className="relative flex justify-center">
+
                 <div className="max-w-6xl mx-auto py-16">
                     <div className="relative text-center my-16 max-w-3xl mx-auto font-serif space-y-4">
                         <h3 className="text-Lightcolor text-2xl font-semibold">Our Blogs Offers</h3>
@@ -122,6 +123,7 @@ export default function BlogCard() {
                         ))}
                     </div>
                 </div>
+
             </div>
         </>
     );

@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
+import About from "../src/pages/About"
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -16,8 +18,8 @@ function App() {
         <Route path="/admin/bookings" element={<AdminBookings />} /> */}
         
         <Route path="/" element={<Home />} />
-        {/* <Route path="/about-us" element={<About />} />
-        <Route path="/rooms-cottage" element={<Rooms />} />
+        <Route path="/about-us" element={<About />} />
+        {/* <Route path="/rooms-cottage" element={<Rooms />} />
         <Route path="/rooms-cottage/:slug" element={<RoomDetail />} />
         <Route path="/restaurant" element={<Restaurant />} />
         <Route path="/menu" element={<Menu />} />
@@ -26,7 +28,7 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/payment-success" element={<PaymentSuccess />} /> */}
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </BrowserRouter>
   );
 }
