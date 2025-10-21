@@ -10,9 +10,9 @@ export default function About() {
     <div>
       <Herosection/>
       <AboutSec/>
-      {/* <CoreFeatures/>
+      <CoreFeatures/>
       <TourGuides/>
-      <Testimonials/> */}
+      <Testimonials/>
     </div>
   )
 }

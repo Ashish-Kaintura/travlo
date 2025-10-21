@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Home from "./pages/Home";
 import About from "../src/pages/About"
 import Footer from "./components/Footer";
+import DestinationDetail from "./pages/DestinationDetail";
+import DestinationList from "./pages/DestinationList";
 
 
 function App() {
@@ -19,14 +21,8 @@ function App() {
         
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
-        {/* <Route path="/rooms-cottage" element={<Rooms />} />
-        <Route path="/rooms-cottage/:slug" element={<RoomDetail />} />
-        <Route path="/restaurant" element={<Restaurant />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/event-and-packages" element={<EventsAndPackages />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/contact-us" element={<Contact />} />
-        <Route path="/payment-success" element={<PaymentSuccess />} /> */}
+        <Route path="/destination" element={<DestinationList />} />
+        <Route path="/destination/:slug" element={<DestinationDetail />} />
       </Routes>
       <Footer/>
     </BrowserRouter>

@@ -155,7 +155,7 @@ const Navbar = () => {
               {activeDropdown === "pilot" && renderDropdown("pilot")}
             </li> */}
 
-            <NavLink to="/">
+            <NavLink to="/destination">
               <li className="hover:text-Secondary">Destination</li>
             </NavLink>
             <NavLink to="/">
